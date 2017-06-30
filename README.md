@@ -15,9 +15,13 @@ go install -v -tags gtk_3_18 -gcflags "-N -l" onioncfg
 
 Assumptions made by onioncfg:
 
-* torrc on disk has DisableNetwork set to 1
+* torrc on disk has DisableNetwork set to 1 so that the Tor client start making connections at system startup unless told by something (i.e. onioncfg) that it can
 
-* Pluggable transport has been defined in torrc already
+* Pluggable transport has been defined in torrc already, e.g.:
+
+``` 
+ClientTransportPlugin obfs3,obfs4 exec /usr/bin/obfs4proxy
+```
 
 * Some hardening on systemd Tor startup has been relaxed so that the obfs4proxy executable can be run (still figuring out what the ideal configuration is..)
 
