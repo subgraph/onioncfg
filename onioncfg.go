@@ -238,7 +238,7 @@ func emitConfig(c *bulb.Conn, key, val string) {
 func main() {
 	gtk.Init(nil)
 
-	c, err := bulb.Dial("unix", "/var/run/tor/control")
+	c, err := bulb.Dial("tcp", "127.0.0.1:9111")
 	if err != nil {
 		log.Fatal("failed to connect to control port:", err)
 	}
@@ -370,7 +370,7 @@ func main() {
 
 
 	btnbox := get_hbox()
-	btn := get_button("Go configure")
+	btn := get_button("Set config and connect")
 	btnbox.PackStart(btn, false, false, 10)
 	box.PackStart(btnbox, false, false, 10)
 
@@ -467,6 +467,8 @@ func main() {
 			}
 
 		}
+		fmt.Println("Setting DisableNetwork to 0")
+		emitConfig(c, "DisableNetwork", "0")
 
 	})
 
