@@ -21,3 +21,8 @@ Assumptions made by onioncfg:
 
 * Some hardening on systemd Tor startup has been relaxed so that the obfs4proxy executable can be run (still figuring out what the ideal configuration is..)
 
+* Tor control port is listening on TCP port 9111. This is because of a Tor quirk where if DisableNetwork is set to 1, the unix domain socket interface for
+the Tor Control protocol isn't created even if specified (and it seems it should be). Therefore, for now, we require a TCP Tor Control port to be listening. We arbitrarily chose 9111.
+
+
+
