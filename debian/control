@@ -1,0 +1,17 @@
+Source: onioncfg
+Section: admin
+Priority: optional
+Maintainer: Subgraph <info@subgraph.com>
+Build-Depends: debhelper (>= 10), golang-go (>= 1.6), dh-golang, libgtk-3-dev, dh-systemd, golang-godebiancontrol-dev, pkg-config, golang-golang-x-net-dev, golang-github-gotk3-gotk3-dev
+Standards-Version: 3.9.8
+Homepage: https://github.com/subgraph/onioncfg
+Vcs-Git: https://github.com/subgraph/onioncfg.git
+XS-Go-Import-Path: github.com/subgraph/onioncfg
+Vcs-Browser: https://github.com/subgraph/onioncfg
+
+Package: onioncfg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgtk-3-0, golang
+Description: tor controller
+ control tor
+ .
