@@ -1,0 +1,48 @@
+{
+	"ImportPath": "github.com/subgraph/onioncfg",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gotk3/gotk3/cairo",
+			"Comment": "GOTK3_0_2_0-567-g52a90df",
+			"Rev": "52a90dfa7c0eaa36b58e0f1d8f1e3efcc462ceee"
+		},
+		{
+			"ImportPath": "github.com/gotk3/gotk3/gdk",
+			"Comment": "GOTK3_0_2_0-567-g52a90df",
+			"Rev": "52a90dfa7c0eaa36b58e0f1d8f1e3efcc462ceee"
+		},
+		{
+			"ImportPath": "github.com/gotk3/gotk3/glib",
+			"Comment": "GOTK3_0_2_0-567-g52a90df",
+			"Rev": "52a90dfa7c0eaa36b58e0f1d8f1e3efcc462ceee"
+		},
+		{
+			"ImportPath": "github.com/gotk3/gotk3/gtk",
+			"Comment": "GOTK3_0_2_0-567-g52a90df",
+			"Rev": "52a90dfa7c0eaa36b58e0f1d8f1e3efcc462ceee"
+		},
+		{
+			"ImportPath": "github.com/gotk3/gotk3/pango",
+			"Comment": "GOTK3_0_2_0-567-g52a90df",
+			"Rev": "52a90dfa7c0eaa36b58e0f1d8f1e3efcc462ceee"
+		},
+		{
+			"ImportPath": "github.com/yawning/bulb",
+			"Rev": "85d80d893c3d4a478b8c0abbc43f0ea13e1ce4f9"
+		},
+		{
+			"ImportPath": "github.com/yawning/bulb/utils",
+			"Rev": "85d80d893c3d4a478b8c0abbc43f0ea13e1ce4f9"
+		},
+		{
+			"ImportPath": "github.com/yawning/bulb/utils/pkcs1",
+			"Rev": "85d80d893c3d4a478b8c0abbc43f0ea13e1ce4f9"
+		},
+		{
+			"ImportPath": "golang.org/x/net/proxy",
+			"Rev": "66aacef3dd8a676686c7ae3716979581e8b03c47"
+		}
+	]
+}
