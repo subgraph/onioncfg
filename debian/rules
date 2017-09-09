@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-export DH_VERBOSE=1
+#export DH_VERBOSE=1
 export DH_OPTIONS
 export DH_GOPKG := github.com/subgraph/onioncfg
 
@@ -11,11 +11,10 @@ override_dh_auto_build:
 	# If building with golang-github-gotk3-gotk3-dev the build root needs
 	# to have package mono-runtime-sgen installed with pax flag 'm' set on
 	# /usr/bin/mono-sgen
-	dh_auto_build -- -v -tags gtk318 -gcflags "-N -l" -buildmode=pie -pkgdir=$$(mktemp -d -p $(CURDIR))
-
+	dh_auto_build -- -v -tags gtk318 -buildmode=pie -pkgdir=$$(mktemp -d -p $(CURDIR))
 
 override_dh_auto_install:
-	dh_auto_install
+	@dh_auto_install
 	rm -rf $(CURDIR)/debian/onioncfg/usr/share/gocode
 
 override_dh_auto_test:
